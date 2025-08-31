@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zaara Couture – Bridal & Party Lehengas</title>
+  <meta name="description" content="A beautiful boutique website for lehengas – home, gallery, designers, services, about, and contact sections."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --panel:#111114;
+      --ink:#e9e6df;
+      --muted:#bcb7ac;
+      --brand:#e6b8c7; /* dusty rose */
+      --brand-2:#c59ab0; /* deeper rose */
+      --accent:#ffd9a0; /* soft gold */
+      --glass: rgba(255,255,255,.06);
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,sans-serif;scroll-behavior:smooth}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1200px,92vw);margin-inline:auto}
+
+    /* NAV */
+    nav.site-nav{position:sticky;top:0;z-index:999;background:linear-gradient(180deg,#0b0b0cf2 0%,#0b0b0ccc 60%,transparent 100%);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #ffffff12}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand-logo{width:40px;height:40px;border-radius:50%;background:conic-gradient(from 210deg at 50% 50%, var(--brand), var(--accent), var(--brand-2));box-shadow:0 6px 18px #00000066}
+    .brand h1{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:.5px;margin:0;font-size:20px}
+    .brand small{display:block;color:var(--muted);font-weight:500;font-size:11px;margin-top:-2px}
+    .nav-links{display:flex;gap:22px;align-items:center}
+    .nav-links a{padding:8px 12px;border-radius:999px;border:1px solid transparent}
+    .nav-links a:hover,.nav-links a.active{border-color:#ffffff22;background:#ffffff0f}
+    .nav-cta{padding:10px 16px;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--accent));color:#2b1b20;font-weight:700;box-shadow:0 10px 24px #e6b8c733}
+    .hamburger{display:none;gap:6px;flex-direction:column}
+    .hamburger span{width:28px;height:2px;background:#fff;border-radius:2px}
+
+    /* HERO */
+    header.hero{position:relative;overflow:hidden}
+    .hero-bg{
+position:absolute;
+inset:0;
+background:
+radial-gradient(1200px 600px at 80% -10%, #c59ab022 10%, transparent 60%),
+radial-gradient(800px 800px at -10% 20%, #ffd9a022 10%, transparent 60%),
+url("C:\Users\Hardik Kumar\Downloads\New folder\IMAGES\lehenga 2.png") center/cover no-repeat;
+filter:saturate(80%);
+transform:scale(1.02);
+z-index:-1;
+}
+    .hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.1),rgba(11,11,12,.6) 40%,rgba(11,11,12,.95));}
+    .hero-inner{position:relative;padding:120px 0 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+    .hero-tag{display:inline-flex;gap:8px;align-items:center;background:#ffffff10;border:1px solid #ffffff1f;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+    .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+    .hero h2{font-family:"Playfair Display",serif;font-weight:900;font-size:54px;line-height:1.05;margin:0 0 14px;letter-spacing:.2px}
+    .hero p{color:var(--muted);font-size:16px;margin:0 0 24px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid #ffffff22;background:#ffffff0a}
+    .btn.primary{background:linear-gradient(90deg,var(--brand-2),var(--brand));border-color:transparent;color:#2b1b20;font-weight:800}
+    .stat-card{background:var(--glass);border:1px solid #ffffff14;border-radius:var(--radius);padding:14px 16px;display:flex;gap:12px;align-items:center;backdrop-filter:blur(6px)}
+    .stat-card strong{font-size:22px}
+    .hero-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .hero-card{background:#121217;border:1px solid #ffffff12;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .hero-card h4{font-family:"Playfair Display",serif;margin:0 0 6px}
+
+    /* SECTIONS */
+    section{padding:80px 0;border-top:1px solid #ffffff0f}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:26px;gap:16px}
+    .eyebrow{display:inline-block;font-weight:700;color:var(--brand);letter-spacing:1.4px;text-transform:uppercase;font-size:12px}
+    .title{font-family:"Playfair Display",serif;font-size:36px;margin:6px 0 0}
+    .subtitle{color:var(--muted);margin:8px 0 0}
+
+    /* COLLECTIONS */
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .card{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid #ffffff14;background:#121217}
+    .card img{height:340px;width:100%;object-fit:cover;transition:transform .5s ease}
+    .card:hover img{transform:scale(1.05)}
+    .card .pill{position:absolute;top:14px;left:14px;background:#00000070;padding:6px 10px;border:1px solid #ffffff26;border-radius:999px;font-size:12px}
+    .card .cap{position:absolute;inset:auto 0 0 0;padding:16px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.86) 60%);}
+    .card h4{margin:0 0 6px;font-family:"Playfair Display",serif}
+    .card p{margin:0;color:#d8d4ccaa}
+
+    /* GALLERY */
+    .masonry{columns:1;column-gap:16px}
+    .masonry img{break-inside:avoid;margin-bottom:16px;border-radius:16px;border:1px solid #ffffff14}
+
+    /* DESIGNERS / SERVICES */
+    .list{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+    .tile{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid #ffffff10;border-radius:16px;padding:16px}
+    .tile .icon{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--brand));flex:none;display:grid;place-items:center;color:#2a1b20;font-weight:900}
+
+    /* TESTIMONIALS */
+    .slider{position:relative;overflow:hidden;border-radius:20px;border:1px solid #ffffff12;background:linear-gradient(180deg,#0f0f12,#141419)}
+    .slides{display:flex;transition:transform .6s ease}
+    .slide{min-width:100%;padding:26px 22px}
+    .slide blockquote{margin:0;font-size:18px;color:#eae6de}
+    .slide footer{margin-top:14px;color:#bdb8ad;font-size:14px}
+    .dots{display:flex;gap:8px;justify-content:center;padding:10px}
+    .dots button{width:8px;height:8px;border-radius:50%;border:none;background:#ffffff2a}
+    .dots button.active{background:linear-gradient(90deg,var(--brand),var(--accent))}
+
+    /* APPOINTMENT */
+    form{display:grid;gap:14px}
+    .field{display:grid;gap:8px}
+    .field input,.field select,.field textarea{background:#111217;border:1px solid #ffffff1b;color:#efeae1;padding:12px 14px;border-radius:12px}
+    .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #ffffff22;border-color:#ffffff33}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .map{border-radius:16px;border:1px solid #ffffff14;overflow:hidden;min-height:300px;background:linear-gradient(180deg,#16161b,#0f0f12)}
+
+    /* FOOTER */
+    footer.site-footer{padding:26px 0 40px;background:#0b0b0f;border-top:1px solid #ffffff12;margin-top:40px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:18px}
+    .footer-grid h5{font-family:"Playfair Display",serif;margin:0 0 10px}
+    .copyright{margin-top:22px;color:#9d978d;font-size:13px}
+
+    /* UTIL */
+    .reveal{opacity:0;transform:translateY(16px);transition:all .7s ease}
+    .reveal.in{opacity:1;transform:none}
+    .muted{color:var(--muted)}
+    .chip{display:inline-block;padding:8px 12px;border:1px solid #ffffff18;border-radius:999px;background:#ffffff08}
+    .spacer{height:10px}
+    .top-btn{position:fixed;right:18px;bottom:18px;padding:12px 14px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--accent));border:none;color:#2b1b20;font-weight:900;box-shadow:0 12px 26px #00000055;display:none}
+
+    /* RESPONSIVE */
+    @media (max-width:1000px){
+      .hero-inner{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr 1fr}
+      .list{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:720px){
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .grid.cols-3{grid-template-columns:1fr}
+      .two{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .masonry{columns:1}
+      .hero h2{font-size:38px}
+    }
+    @media (min-width:721px){
+      .masonry{columns:2}
+    }
+    @media (min-width:1024px){
+      .masonry{columns:3}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <div>
+          <h1>Hardik Bridal Couture</h1>
+          <small>Lehengas • Bridal • Couture</small>
+        </div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#collection">Collections</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#designers">Designers</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Love Notes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#appointment" class="nav-cta">Book Trial</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile Drawer -->
+    <div id="navDrawer" hidden>
+      <div class="container" style="padding:10px 0 16px;display:grid;gap:10px">
+        <a href="#home">Home</a>
+        <a href="#collection">Collections</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#designers">Designers</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Love Notes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#appointment" class="nav-cta" style="justify-self:start">Book Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / HOME -->
+  <header id="home" class="hero">
+    <div class="hero-bg" role="img" aria-label="Bridal lehenga background image"></div>
+    <div class="hero-shade"></div>
+    <div class="container hero-inner">
+      <div class="reveal">
+        <span class="hero-tag"><span class="dot"></span> Handcrafted in India</span>
+        <h2>Dream Lehengas for Your Once‑in‑a‑Lifetime Moments</h2>
+        <p>From royal bridal couture to playful sangeet twirls — discover silhouettes, fabrics and handwork that celebrate you.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#collection">Explore Collections</a>
+          <a class="btn" href="#appointment">Book a Studio Trial</a>
+          <div class="stat-card" title="Happy clients served">
+            <strong>1.2k+</strong>
+            <span class="muted">Happy brides & muses</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-cards reveal" style="align-self:end">
+        <div class="hero-card">
+          <h4>Custom Embroidery</h4>
+          <p>Personalize motifs, kalis and borders. Our artisans bring heirloom stories to thread.</p>
+        </div>
+        <div class="hero-card">
+          <h4>Try‑at‑Home Service</h4>
+          <p>Shortlist 3 looks and get a guided video consult or an at‑home trial (select cities).</p>
+        </div>
+        <div class="hero-card">
+          <h4>Worldwide Shipping</h4>
+          <p>Secure packaging, insured deliveries and alteration support after arrival.</p>
+        </div>
+        <div class="hero-card">
+          <h4>Size‑Inclusive</h4>
+          <p>Made‑to‑measure patterns with couture‑grade fitting for every body.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- COLLECTIONS -->
+  <section id="collection">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Curated Collections</span>
+          <h3 class="title">Signature Lines for Every Ceremony</h3>
+          <p class="subtitle">Handpicked ensembles across bridal, mehendi, sangeet and reception palettes.</p>
+        </div>
+        <div class="chip">Turnaround: 4–10 weeks</div>
+      </div>
+      <div class="grid cols-3">
+        <!-- Replace image src values with your real photos -->
+        <article class="card reveal">
+          <span class="pill">Bridal • Heirloom</span>
+          <img src="C:\Users\Hardik Kumar\Downloads\WhatsApp Image 2025-08-16 at 12.40.18 PM.jpeg" alt="Deep red bridal lehenga"/>
+          <div class="cap">
+            <h4>Rajwada Bride</h4>
+            <p>Zardozi, gota patti & velvet borders in regal reds.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <span class="pill">Sangeet • Twirl‑ready</span>
+          <img src="C:\Users\Hardik Kumar\Downloads\WhatsApp Image 2025-08-16 at 12.37.35 PM.jpeg" alt="Pastel lehenga"/>
+          <div class="cap">
+            <h4>Noor Pastels</h4>
+            <p>Organza and sequins with airy flare for effortless moves.</p>
+          </div>
+        </article>
+        <article class="card reveal">
+          <span class="pill">Reception • Statement</span>
+          <img src="C:\Users\Hardik Kumar\Downloads\2025-02-16.jpg" alt="Gold lehenga"/>
+          <div class="cap">
+            <h4>Gilded Hour</h4>
+            <p>Antique gold with crystal work — luminous under lights.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Gallery</span>
+          <h3 class="title">A Peek Into Our Lookbook</h3>
+          <p class="subtitle">Tap any photo to view in full — replace these with your own images.</p>
+        </div>
+        <div class="chip">30+ looks</div>
+      </div>
+      <div class="masonry" id="galleryGrid">
+        <!-- Replace with your images; keep data-title for captions -->
+        <img src="C:\Users\Hardik Kumar\Downloads\image 9.jpg" alt="Bridal dupatta detail" data-title="Hand‑embroidered dupatta borders"/>
+        <img src="C:\Users\Hardik Kumar\Downloads\image 8.jpg" alt="Jewelry closeup" data-title="Kundan & polki accents"/>
+        <img src="C:\Users\Hardik Kumar\Downloads\WhatsApp Image 2025-08-16 at 12.36.22 PM.jpeg" alt="Studio detail" data-title="Sangeet sparkle"/>
+        <img src="C:\Users\Hardik Kumar\Downloads\Bollywood Style Peach Dupatta With Dabka Work.jpg" alt="Fabric drape" data-title="Flowy organza layers"/>
+        <img src="C:\Users\Hardik Kumar\Downloads\download (19).jpg" alt="Mehendi greens" data-title="Emerald tones"/>
+        <img src="C:\Users\Hardik Kumar\Downloads\download (20).jpg" alt="Bridal portrait" data-title="Classic red bride"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGNERS -->
+  <section id="designers">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">The Atelier</span>
+          <h3 class="title">Designers & Craft Clusters</h3>
+          <p class="subtitle">A collective of pattern masters, karigars and textile artists across India.</p>
+        </div>
+        <div class="chip">Since 2007</div>
+      </div>
+      <div class="list">
+        <div class="reveal">
+          <div class="tile">
+            <div class="icon">A</div>
+            <div>
+              <h4 style="margin:0 0 4px">Appliqué & Zardozi</h4>
+              <p class="muted">Lucknow artisans crafting antique zardozi with French knots and bead weaving.</p>
+            </div>
+          </div>
+          <div class="tile" style="margin-top:12px">
+            <div class="icon">B</div>
+            <div>
+              <h4 style="margin:0 0 4px">Banarasi Kadhua</h4>
+              <p class="muted">Pure silk brocades woven on handlooms — limited edition motifs.</p>
+            </div>
+          </div>
+          <div class="tile" style="margin-top:12px">
+            <div class="icon">K</div>
+            <div>
+              <h4 style="margin:0 0 4px">Kutch Mirrorwork</h4>
+              <p class="muted">Playful mirrors with tone‑on‑tone resham for mehendi and haldi edits.</p>
+            </div>
+          </div>
+        </div>
+        <aside class="reveal" style="align-self:start">
+          <div class="slider" id="designerSlider">
+            <div class="slides">
+              <div class="slide">
+                <blockquote>“The fitting was couture‑perfect in one go. I felt like a royal princess.”</blockquote>
+                <footer>— Sana, Mumbai</footer>
+              </div>
+              <div class="slide">
+                <blockquote>“We customized the dupatta border with my mom’s motif. It’s an heirloom now.”</blockquote>
+                <footer>— Rhea, Delhi</footer>
+              </div>
+              <div class="slide">
+                <blockquote>“Super light pastel lehenga that twirls like a dream on sangeet night.”</blockquote>
+                <footer>— Alia, Chandigarh</footer>
+              </div>
+            </div>
+            <div class="dots" aria-label="Slide dots"></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Services</span>
+          <h3 class="title">From Sketch to Saat Pheras</h3>
+          <p class="subtitle">End‑to‑end bridal styling and lehenga personalization.</p>
+        </div>
+        <div class="chip">Consult → Design → Stitch → Fit</div>
+      </div>
+      <div class="grid cols-3">
+        <div class="tile reveal">
+          <div class="icon">1</div>
+          <div>
+            <h4 style="margin:0 0 6px">Style Consult</h4>
+            <p class="muted">Book a 30‑min consult to shortlist silhouettes that flatter your vibe.</p>
+          </div>
+        </div>
+        <div class="tile reveal">
+          <div class="icon">2</div>
+          <div>
+            <h4 style="margin:0 0 6px">Custom Sketch</h4>
+            <p class="muted">Personalized croquis with motifs, borders and color story.</p>
+          </div>
+        </div>
+        <div class="tile reveal">
+          <div class="icon">3</div>
+          <div>
+            <h4 style="margin:0 0 6px">Trial & Fittings</h4>
+            <p class="muted">Muslin trial and two fittings for couture‑level finish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT / FORM -->
+  <section id="appointment">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Book a Trial</span>
+          <h3 class="title">Reserve Your Studio Appointment</h3>
+          <p class="subtitle">We’ll confirm on WhatsApp within 24 hours. Fields marked * are required.</p>
+        </div>
+        <div class="chip">Open Mon–Sun • 11am–8pm</div>
+      </div>
+      <form id="apptForm" novalidate>
+        <div class="two">
+          <div class="field">
+            <label for="name">Full Name *</label>
+            <input id="name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone *</label>
+            <input id="phone" name="phone" required placeholder="10‑digit mobile" pattern="^[0-9]{10}$" />
+          </div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="city">City</label>
+            <input id="city" name="city" placeholder="e.g., Chandigarh" />
+          </div>
+          <div class="field">
+            <label for="occasion">Occasion *</label>
+            <select id="occasion" name="occasion" required>
+              <option value="">Select an occasion</option>
+              <option>Bridal</option>
+              <option>Mehendi</option>
+              <option>Sangeet</option>
+              <option>Reception</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="notes">Notes (measurements, color, budget)</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Tell us your vision…"></textarea>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <button class="btn primary" type="submit">Request Appointment</button>
+          <span id="formMsg" class="muted" role="status"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">About Us</span>
+          <h3 class="title">Couture with Heart</h3>
+          <p class="subtitle">Built by women, for women — ethical craftsmanship and transparent pricing.</p>
+        </div>
+        <div class="chip">Proudly made in India</div>
+      </div>
+      <div class="grid cols-3">
+        <div class="hero-card reveal">
+          <h4>Our Promise</h4>
+          <p>We obsess over fabric sourcing, handwork integrity and comfortable construction so you can move and glow.</p>
+        </div>
+        <div class="hero-card reveal">
+          <h4>Ethical Craft</h4>
+          <p>Fair wages, artisan upskilling and recycled packaging for minimal waste.</p>
+        </div>
+        <div class="hero-card reveal">
+          <h4>Transparent Care</h4>
+          <p>Detailed care cards, post‑wedding alterations and storage tips to keep your look timeless.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h3 class="title">Visit Our Showroom</h3>
+          <p class="subtitle">Hardik Bridal Couture, Pragati Market, Dhakoli • +91‑9855136558 • kumarhardik495@gmail.com</p>
+        </div>
+        <div class="chip">Every Day Open</div>
+      </div>
+      <div class="contact-grid">
+        <div class="map" aria-label="Map placeholder">
+          <!-- Replace with your Google Maps iframe if you want -->
+          <img src="C:\Users\Hardik Kumar\Downloads\lights.jpg" alt="Studio interior placeholder" style="width:100%;height:100%;object-fit:cover;opacity:.9"/>
+        </div>
+        <div class="hero-card">
+          <h4>Store Hours</h4>
+          <ul class="muted" style="margin:10px 0 0;line-height:1.8">
+            <li>Mon–Sun: 11:00 AM – 8:00 PM</li>
+            <li>ExoGamingM24 : Youtube</li>
+            <li>WhatsApp: +91‑9855136558</li>
+          </ul>
+          <div class="spacer"></div>
+          <h4>Quick Links</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px">
+            <a class="chip" href="#appointment">Book Trial</a>
+            <a class="chip" href="#gallery">Lookbook</a>
+            <a class="chip" href="#services">Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:10px">
+          <div class="brand-logo"></div>
+          <div>
+            <h1>Hardik Bridal Couture</h1>
+            <small>Lehengas • Bridal • Couture</small>
+          </div>
+        </div>
+        <p class="muted">Timeless silhouettes, handcrafted with love. Couture‑grade fitting & global shipping.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <a href="#collection">Collections</a><br>
+        <a href="#gallery">Gallery</a><br>
+        <a href="#designers">Designers</a>
+      </div>
+      <div>
+        <h5>Help</h5>
+        <a href="#services">Services</a><br>
+        <a href="#appointment">Appointment</a><br>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h5>Policies</h5>
+        <a href="#">Shipping</a><br>
+        <a href="#">Returns</a><br>
+        <a href="#">Care Guide</a>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Hardik Bridal Couture. All rights reserved.</div>
+  </footer>
+
+  <button class="top-btn" id="toTop" aria-label="Back to top">↑</button>
+
+  <script>
+    // Sticky nav active link (scroll spy)
+    const sections = [...document.querySelectorAll('section, header.hero')];
+    const navLinks = [...document.querySelectorAll('.nav-links a')];
+    const setActive = (id)=>{
+      navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === `#${id}`));
+    };
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e=>{
+        if(e.isIntersecting){ setActive(e.target.id || 'home'); }
+      });
+    }, {rootMargin:'-50% 0px -45% 0px', threshold:0});
+    sections.forEach(s=>spy.observe(s));
+
+    // Reveal on scroll
+    const reveal = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); reveal.unobserve(e.target); }
+      })
+    },{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>reveal.observe(el));
+
+    // Back to top
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll',()=>{
+      toTop.style.display = window.scrollY>500 ? 'inline-flex' : 'none';
+    });
+    toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('navDrawer');
+    hamburger.addEventListener('click',()=>{
+      const open = drawer.hasAttribute('hidden') === false;
+      if(open){ drawer.setAttribute('hidden',''); hamburger.setAttribute('aria-expanded','false'); }
+      else { drawer.removeAttribute('hidden'); hamburger.setAttribute('aria-expanded','true'); }
+    });
+    drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.setAttribute('hidden','')));
+
+    // Smooth anchor offset for sticky nav (optional extra control on click)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if(target){
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - 70;
+          window.scrollTo({top:y, behavior:'smooth'});
+        }
+      });
+    });
+
+    // Simple lightbox for gallery
+    const grid = document.getElementById('galleryGrid');
+    const lightbox = document.createElement('dialog');
+    lightbox.style.cssText = 'border:none;border-radius:16px;overflow:hidden;max-width:min(96vw,1000px);background:#0c0c10;padding:0;';
+    lightbox.innerHTML = `
+      <div style="position:relative">
+        <button id="lbClose" aria-label="Close" style="position:absolute;top:8px;right:8px;border:none;background:#00000066;color:#fff;padding:8px;border-radius:10px">✕</button>
+        <img id="lbImg" alt="Expanded image" style="display:block;width:100%">
+        <div id="lbCap" style="padding:12px 14px;color:#bcb7ac"></div>
+      </div>`;
+    document.body.appendChild(lightbox);
+    grid.addEventListener('click',e=>{
+      const img = e.target.closest('img');
+      if(!img) return;
+      document.getElementById('lbImg').src = img.src;
+      document.getElementById('lbCap').textContent = img.dataset.title || img.alt || '';
+      lightbox.showModal();
+    });
+    lightbox.addEventListener('click',e=>{ if(e.target.id==='lbClose' || e.target===lightbox) lightbox.close(); });
+
+    // Testimonials slider
+    const slider = document.getElementById('designerSlider');
+    const slidesWrap = slider.querySelector('.slides');
+    const total = slidesWrap.children.length;
+    const dotsWrap = slider.querySelector('.dots');
+    let idx = 0, timer;
+    const goto = (i)=>{
+      idx = (i+total)%total;
+      slidesWrap.style.transform = `translateX(-${idx*100}%)`;
+      dotsWrap.querySelectorAll('button').forEach((b,j)=>b.classList.toggle('active',j===idx));
+    };
+    for(let i=0;i<total;i++){
+      const b=document.createElement('button');
+      b.addEventListener('click',()=>{goto(i); reset();});
+      dotsWrap.appendChild(b);
+    }
+    goto(0);
+    const play = ()=> timer = setInterval(()=>goto(idx+1), 4500);
+    const stop = ()=> clearInterval(timer);
+    const reset = ()=>{ stop(); play(); };
+    slider.addEventListener('mouseenter',stop);
+    slider.addEventListener('mouseleave',play);
+    play();
+
+    // Form validation (basic front‑end demo)
+    const form = document.getElementById('apptForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      msg.textContent = '';
+      if(!form.checkValidity()){
+        msg.textContent = 'Please fill required fields correctly.';
+        msg.style.color = '#ffb4b4';
+        return;
+      }
+      const data = Object.fromEntries(new FormData(form).entries());
+      console.log('Appointment request:', data); // replace with fetch() to your backend
+      msg.textContent = 'Thanks! We\'ll confirm your appointment shortly.';
+      msg.style.color = '#a7f3a1';
+      form.reset();
+    });
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
